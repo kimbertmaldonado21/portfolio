@@ -1,0 +1,134 @@
+.Navigation{
+    height: 770px;
+    width: 100vw;
+    // background-color: #071e22;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: height 1s;
+    background-image: url('../Images/Navigation/banner-speed.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    .Header{
+        // background-color: blue;
+        height: 250px;
+        width: 60vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        animation: slide-up 1.5s 0.6s forwards;
+        display: hidden;
+    }
+    
+    h2{
+        // color: red;
+        font-size: 6vw;
+        -webkit-text-stroke: 0.1vw #cacaca;
+        text-transform: uppercase;
+        
+        &:before{
+            // content: attr(data-text);
+            position: absolute;
+            top:0;
+            left: 0;
+            border-right: 1px solid #019fb6;
+            width: 0%;
+            height: 100%;
+            color: white;
+            -webkit-text-stroke: 0vw #071e22;
+            // animation: changecolor 2s linear infinite;
+        }
+
+        
+    }
+
+
+    @keyframes changecolor {
+        
+        0%{
+            width: 0%;
+            // color: black;
+        }
+        50%{
+            width: 50%;
+            // color: red;
+        }
+
+        100%{
+            width:100%;
+            // color: green;
+        }
+    }
+
+
+    a{
+        display: none;
+        color: white;
+        margin-right: 50px;
+    }
+
+}
+
+.Navigation.active{
+    position: fixed;
+    height: 200px;
+    width: 100vw;
+    // background-color: #071e22;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    // background-image: none;
+    box-shadow: rgba(110, 110, 110, 0.4) 0px 5px, rgba(104, 104, 104, 0.3) 0px 10px, rgba(141, 141, 141, 0.2) 0px 15px, rgba(116, 116, 116, 0.1) 0px 20px, rgba(146, 146, 146, 0.05) 0px 25px;
+    // width: 300px;
+    a:not(:last-child){
+        display: block;
+        color: white;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-decoration: none;
+        font-size: 24px;
+        font-weight: 700;
+        margin-right: 50px;
+        opacity: 0;
+        animation: slide-up 1s 0.6s forwards;
+    }
+    .Header{
+        display: none;
+    }
+
+    a:after{
+        display:block;
+        content: '';
+        border-bottom: solid 3px #019fb6;  
+        transform: scaleX(0);  
+        transition: transform 500ms ease-in-out;
+    }
+    a:hover:after{
+        transform: scaleX(1.5); 
+    }
+}
+
+
+@media (max-width : 680px) {
+    .Navigation a:not(:last-child){
+
+        display: none;
+
+    }
+
+    .Navigation{
+        height:671px;
+        width: 100vw;
+        background-color: #071e22;
+    }
+    
+    .Navigation.active {
+        height:70px;
+        width: 100vw;
+    }
+    
+
+}
+
+
+

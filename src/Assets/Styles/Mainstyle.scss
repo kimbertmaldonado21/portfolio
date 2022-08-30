@@ -1,0 +1,37 @@
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+
+body{
+    background-color: #F2F2F2;
+    scroll-behavior: smooth !important;
+    overflow-x: hidden;
+    overflow-y: unset;
+    .App{
+        @import './Navigation.scss';
+        @import './Content.scss';
+    }
+    
+}
+
+
+
+
+@keyframes slide-up {
+    0%{
+        
+        opacity: -2;
+        transform: translateY(200%);
+    }
+    50% {
+
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+}
