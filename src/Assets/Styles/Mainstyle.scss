@@ -6,7 +6,7 @@
 
 body{
     background-color: #F2F2F2;
-    scroll-behavior: smooth !important;
+    scroll-behavior: inherit;
     overflow-x: hidden;
     overflow-y: unset;
     .App{
@@ -16,14 +16,11 @@ body{
     
 }
 
-
-
-
-@keyframes slide-up {
+@keyframes pop-up {
     0%{
         
         opacity: -2;
-        transform: translateY(200%);
+        // transform: translateY(200%);
     }
     50% {
 
@@ -31,7 +28,80 @@ body{
     }
     100% {
         opacity: 1;
+        // transform: translateY(0);
+    }
+    
+}
+
+
+@keyframes slide-up {
+    0%{
+        visibility: visible;
+        opacity: -2;
+        transform: translateY(200%);
+    }
+    50% {
+        visibility: visible;
+        opacity: 0;
+    }
+    100% {
+        visibility: visible;
+        opacity: 1;
         transform: translateY(0);
     }
     
+}
+
+@keyframes typing {
+    
+    0%{
+        left: 0%;
+        margin: 0 -35px 0 35px;
+        width: 100%;
+    }
+    25%{
+        left: 25%;
+        margin: 0 -35px 0 35px;
+        width: 75%;
+    }
+    50%{
+        left: 50%;
+        margin: 0 -35px 0 35px;
+        width: 50%;
+    }
+    75%{
+        left: 75%;
+        margin: 0 -35px 0 35px;
+        width: 25%;
+    }
+    90%{
+        left: 100%;
+        margin: 0 -35px 0 35px;
+        width: 0%;
+    }
+    100%{
+        left: 0%;
+        margin: 0 -35px 0 35px;
+        width: 100%;
+    }
+    
+}
+
+@keyframes changecolor {
+    
+    0%{
+        width: 0%;
+        // color: black;
+    }
+    50%{
+        width: 50%;
+        // color: red;
+    }
+
+    100%{
+        width:100%;
+
+        
+        // color: green;
+    }
 }

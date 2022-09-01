@@ -1,6 +1,100 @@
-.Content{
-    // height: 680px;
-    height: 1200px;
-    width: 100vw;
-    background-color: rgb(221, 221, 220);
+@media (min-width: 681px) {
+
+    .row{
+        // background-color: black;
+        width: 90%;
+        height: auto;
+        display: grid;
+        
+        .col-6{
+            grid-row: 1 / 2;
+            width: 100%;
+            // background-color: blue;
+            // margin-right: 10px;
+        }
+        .col-12{
+            width: 100%;
+        }
+    }
+
+    .Content{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        height: 2500px;
+        width: 90vw;
+        margin : 0px 50px 100px 50px;
+        margin-top: 550px;
+        
+        // background-color: rgb(221, 221, 220);
+
+        // background-color: black;
+        
+        .Card{
+            
+            height: 50vh;
+            width: 30vw;
+            padding: 20px 50px 50px 50px;
+            // background-color: black;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+            visibility: hidden;
+            animation: slide-up 1s  0.6s forwards;
+            animation-delay: 2s;
+
+
+            .Card-Header{
+                display: flex;
+                justify-content: center;
+                margin-top:10px;
+                padding: 0px 0px 40px 0px;
+                border-bottom: 2px solid rgb(124, 123, 123);
+                margin-bottom: 1em;
+
+                .Card-Title{
+                    font-family:"Source Sans Pro","-apple-system","BlinkMacSystemFont","Segoe UI","Roboto","Helvetica Neue","Arial","sans-serif","Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+                    font-style:normal;
+                    font-weight: 400;
+                }
+            }
+
+            .Card-Body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 70%;
+                // background-color: black;
+            }
+            .Card-Body p{
+                text-align: justify;
+                text-justify: inter-word;
+                font-size: 2em;
+
+            }
+        }
+    }
+
+}
+
+@media (max-width : 680px) {
+    .Content{
+        position: relative;
+        height: 1200px;
+        width: 100vw;
+        background-color: rgb(221, 221, 220);
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
+
+        .Card{
+            
+            height: 30vh;
+            width: 50vw;
+            padding: 50px 50px 50px 50px;
+            // background-color: black;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        
+            animation: slide-up 1s 0.6s forwards;
+        }
+    }
 }
