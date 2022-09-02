@@ -1,10 +1,10 @@
 @media (min-width: 681px) {
 
     .row{
-        // background-color: black;
         width: 90%;
         height: auto;
-        display: grid;
+        display: flex;
+        flex-wrap: wrap;
         
         .col-6{
             grid-row: 1 / 2;
@@ -13,6 +13,7 @@
             // margin-right: 10px;
         }
         .col-12{
+            grid-row: 1 / 1;
             width: 100%;
         }
     }
@@ -21,25 +22,32 @@
         position: relative;
         display: flex;
         justify-content: center;
-        height: 2500px;
+        height: inherit;
         width: 90vw;
         margin : 0px 50px 100px 50px;
-        margin-top: 550px;
+        margin-top: 850px;
+        // margin: 0 auto;
         
         // background-color: rgb(221, 221, 220);
 
-        // background-color: black;
-        
+        .Card.active{
+            animation: slide-up 1s  0.6s forwards;
+            animation-delay: .5s;
+
+        }
         .Card{
             
-            height: 50vh;
-            width: 30vw;
-            padding: 20px 50px 50px 50px;
-            // background-color: black;
+            // height: 50vh;
+            height: inherit;
+            width: 100%;
+            // padding: 20px 50px 50px 50px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            background-color: transparent;
             box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
             visibility: hidden;
-            animation: slide-up 1s  0.6s forwards;
-            animation-delay: 2s;
+            // animation: slide-up 1s  0.6s forwards;
+            
 
 
             .Card-Header{
@@ -66,10 +74,18 @@
                 // background-color: black;
             }
             .Card-Body p{
-                text-align: justify;
+                text-align:center;
                 text-justify: inter-word;
-                font-size: 2em;
+                font-size: 1.5em;
 
+                
+                img{
+                    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                    border-radius: 10%;
+                    margin: 10px 10px 10px 10px;
+                    height: 20vh;
+                    width: 30vh;
+                }
             }
         }
     }
@@ -79,22 +95,50 @@
 @media (max-width : 680px) {
     .Content{
         position: relative;
-        height: 1200px;
+        height: inherit;
         width: 100vw;
         background-color: rgb(221, 221, 220);
-        margin-top: 100px;
+        padding: 200px 0px 0px 0px;
         display: flex;
         justify-content: center;
 
         .Card{
             
-            height: 30vh;
-            width: 50vw;
-            padding: 50px 50px 50px 50px;
-            // background-color: black;
+            height: inherit;
+            width: 70vw;
+            padding: 50px 20px 50px 20px;
+
+
             box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
         
             animation: slide-up 1s 0.6s forwards;
+            margin-bottom: 70px;
+            .Card-Header{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-bottom: 2px solid black;
+                margin-bottom: 20px;
+            }
+            .Card-Body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 70%;
+                // background-color: black;
+            }
+            .Card-Body p{
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 1.5em;
+                text-align:center;
+                img{
+                    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                    height: 11.5vh;
+                    width: 11.5vh;
+                    margin: 10px 10px 10px 10px;
+                }
+            }
         }
     }
 }

@@ -46,8 +46,8 @@
             position: absolute;
             height: 8vh;
             width: 33vw;
-            left: 36%;
-    
+            left: 40%;
+            // background-color: black;
             &::before{
                 content: '|';
                 position: absolute;
@@ -88,6 +88,7 @@
     position: fixed;
     height: 10vh;
     width: 100vw;
+    z-index: 999;
     // background-color: #071e22;
     display: flex;
     justify-content: flex-end;
@@ -96,17 +97,17 @@
     // box-shadow: rgba(110, 110, 110, 0.4) 0px 5px, rgba(104, 104, 104, 0.3) 0px 10px, rgba(141, 141, 141, 0.2) 0px 15px, rgba(116, 116, 116, 0.1) 0px 20px, rgba(146, 146, 146, 0.05) 0px 25px;
     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
     // width: 300px;
-    a:not(:last-child){
-        display: block;
-        color: white;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        text-decoration: none;
-        font-size: 24px;
-        font-weight: 700;
-        margin-right: 50px;
-        opacity: 0;
-        animation: slide-up 1s 0.6s forwards;
-    }
+    // a:not(:last-child){
+    //     display: block;
+    //     color: white;
+    //     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    //     text-decoration: none;
+    //     font-size: 24px;
+    //     font-weight: 700;
+    //     margin-right: 50px;
+    //     opacity: 0;
+    //     animation: slide-up 1s 0.6s forwards;
+    // }
     .Header{
         display: none;
     }
@@ -132,6 +133,7 @@
     }
 
     .Navigation{
+        z-index: 999;
         height:100vh;
         width: 100vw;
         background-color: #071e22;
@@ -156,7 +158,6 @@
             animation: slide-up 1.5s 0.6s forwards;
             display: hidden;
 
-           
             h2{
                 color: rgb(255, 255, 255);
                 font-size: 15vw;
@@ -177,7 +178,7 @@
                 position: absolute;
                 z-index: 999;
                 height: 20vw;
-                width: 102vw;
+                width: 100vw;
                 top: 125px;
                 left: -130px;
                 // background-color: blue;
@@ -198,49 +199,7 @@
             }
         }
         
-        // h2{
-        //     color: rgb(255, 255, 255);
-        //     font-size: 29vw;
-        //     -webkit-text-stroke: 1px #000000;
-        //     text-transform: uppercase;
-        //     margin-right: 0px;
-        //     font-family:sans-serif;
-            
-            
-    
-            
-        // }
-        // .name{
-        //     color: #176370;
-        //     font-size:10vw;
-        //     -webkit-text-stroke: 1px #cacaca;
-        //     text-transform: uppercase;
-    
-        
-        // }
-        // a{
-        //     display: none;
-        // }
-        // .Cover{
-        //     position: absolute;
-        //     height: 10%;
-        //     width: 55%;
-        //     left: 40px;
-    
-        //     &::before{
-        //         content: '|';
-        //         position: absolute;
-        //         top: 0;
-        //         left: 0;
-        //         right: 250;
-        //         background-color: #0E151B;
-                
-        //         width: 110%;
-        //         height: 100%;
-        //         border-left: 5px solid #176370;
-        //         animation: typing 3s steps(10) infinite;
-        //     }
-        // }
+       
 
         
     }
@@ -253,6 +212,7 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
+        background-color: black;
         .Header{
             display: none;
         }

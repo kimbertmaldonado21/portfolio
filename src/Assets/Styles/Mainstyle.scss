@@ -6,7 +6,7 @@
 
 body{
     background-color: #F2F2F2;
-    scroll-behavior: inherit;
+    scroll-behavior: smooth !important;
     overflow-x: hidden;
     overflow-y: unset;
     .App{

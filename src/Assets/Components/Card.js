@@ -2,7 +2,7 @@ const Card = (props) =>{
  
 
     return (
-        <div className="Card">
+        <div className={props.isScrolled?"Card active" :"Card"}>
             <div className="Card-Header">
                 <h1 className="Card-Title">
                     {props.Header}

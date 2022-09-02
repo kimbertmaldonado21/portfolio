@@ -3,26 +3,43 @@ import React,{useState, useEffect} from "react";
 // Component 
 import ParticlesComponent from "./Assets/Components/Particles";
 import Card from "./Assets/Components/Card";
+import useWindowDimensions from "./Assets/Dimension";
+import About from "./Assets/Components/About";
 
 function App() {
   const [isScrolled, setIsScrolled] = useState(false)
+  const { height, width } = useWindowDimensions();
+  
+  const [Yscroll, setYscroll] = useState("")
 
   useEffect(()=>{
     window.onscroll = () => { 
-      if(window.pageYOffset > 0){
-        setIsScrolled(true)
-        console.log(isScrolled)
+      setYscroll(window.pageYOffset);
+      if(width<768){
+        if(window.window.pageYOffset < 1){
+           return setIsScrolled(false)
+          
+        }
+        return setIsScrolled(true)
+
       }else{
-        setIsScrolled(false)
-        console.log(isScrolled)
-      } 
+        if(window.pageYOffset > 500){
+          return setIsScrolled(true)
+        }
+          return setIsScrolled(false)
+         
+      }
+
     }
     return () => (window.onscroll = null);
   })
+
+  
   
   return (
     <div className="App" >
       <div id="particles-js" className={isScrolled? "Navigation active" : "Navigation"} >
+      {/* <div id="particles-js" className="Navigation" > */}
         {isScrolled?  null : <ParticlesComponent />}
         
         <div className="Header"><h2 data-text="I Am Kimbert">I Am </h2>
@@ -45,19 +62,21 @@ function App() {
       </div>
 
       <div className="Content" id="About">
+        {/* {Yscroll} */}
+        {/* {Yscroll<500 || Yscroll>815?"false" : "true"} */}
+
         <div className="row">
           <div className="col-6">
             <Card Header="About Me"
-            Content = "This is my info qweqw eqweqweqwe ihqwcihqwciw qeih"
+            // Content = "I am A web Developer with a Basic knowledge on HTML CSS JASCRIPT"
+            Content = {<About />}
+            isScrolled = {isScrolled}
             />
           </div>
-          <div className="col-6">
-            <Card Header="About Me"
-            Content = "This is my info qweqw eqweqweqwe ihqwcihqwciw qeih"
-            />
-          </div>
-          
         </div>
+        
+
+          
         
       </div>
     </div>
