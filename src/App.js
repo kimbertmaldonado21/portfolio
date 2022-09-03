@@ -5,6 +5,9 @@ import ParticlesComponent from "./Assets/Components/Particles";
 import Card from "./Assets/Components/Card";
 import useWindowDimensions from "./Assets/Dimension";
 import About from "./Assets/Components/About";
+import WebDev from "./Assets/Components/WebDev";
+import GameDev from "./Assets/Components/GameDev";
+
 
 function App() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -79,10 +82,28 @@ function App() {
         </div>
         
         <br />
-        <div className="row">
-          <div className="col-6">
-            <Card className="Skills" Header="About Me"
-            Content = {<About />}
+        <div className="rowforSkills">
+          <div className="col col-1">
+            <Card 
+            className="Skills" 
+            Header="Web Development"
+            Content = {<WebDev />}
+            isScrolled = {isScrolled}
+            />
+          </div>
+          <div className="col col-2">
+            <Card 
+            className="Skills" 
+            Header="Game Development"
+            Content = {<GameDev />}
+            isScrolled = {isScrolled}
+            />
+          </div>
+          <div className="col col-3">
+            <Card 
+            className="Skills" 
+            Header="Software Development"
+            Content = {<WebDev />}
             isScrolled = {isScrolled}
             />
           </div>

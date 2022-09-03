@@ -28,18 +28,22 @@
         margin: 0 auto;
         margin-top: 800px;
         
-        
+        .Card{
+            visibility: hidden;
+        }
         .Card.active{
             animation: slide-up 1s  0.6s forwards;
             animation-delay: .5s;
 
         }
-        .Card{
+        .Card.about{
             height: inherit;
-            width: 70%;
+            width: 65%;
             
             padding-top: 50px;
             padding-bottom: 50px;
+            padding-right: 20px;
+            padding-left: 20px;
             background-color: transparent;
             box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
             visibility: hidden;
@@ -67,6 +71,86 @@
                 height: 70%;
                 // background-color: black;
             }
+            
+            .Card-Body p{
+                text-align:justify;
+                text-justify: inter-word;
+                font-size: 1.3em;
+
+                p.intro{
+                    text-align:center;
+                    text-justify: inter-word;
+                    font-size: 1.3em;
+                    span{
+                        color: #7c2b6f;
+                        font-size: 1.35em;
+                    }
+                }
+                
+                
+                
+            }
+        }
+
+        .rowforSkills{
+            display: flex;
+            justify-content: center;
+            .col{
+                float: left ;
+                
+                width: 100%;
+                margin: 10px 10px 10px 10px ;
+            }
+
+            .col-1{
+                width: 30%;
+
+            }
+            .col-2{
+                width: 30%;
+
+            } 
+            .col-3{
+                width: 30%;
+
+            }
+
+            
+        }
+        .Card.Skills{
+            height: inherit;
+            // width: 33.33%;
+            
+            padding-top: 50px;
+            padding-bottom: 50px;
+            padding-right: 20px;
+            padding-left: 20px;
+            background-color: transparent;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+            // visibility: hidden;
+            
+            .Card-Header{
+                display: flex;
+                justify-content: center;
+                margin-top:10px;
+                padding: 0px 0px 40px 0px;
+                border-bottom: 2px solid rgb(124, 123, 123);
+                margin-bottom: 1em;
+
+                .Card-Title{
+                    font-family:"Source Sans Pro","-apple-system","BlinkMacSystemFont","Segoe UI","Roboto","Helvetica Neue","Arial","sans-serif","Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+                    font-style:normal;
+                    font-weight: 400;
+                }
+            }
+
+            .Card-Body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 70%;
+            }
             .Card-Body p{
                 text-align:center;
                 text-justify: inter-word;
@@ -80,17 +164,19 @@
                     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
                     border-radius: 10%;
                     margin: 10px 10px 10px 10px;
-                    height: 15vh;
-                    width: 25vh;
+                    height: 10vh;
+                    width: 15vh;
                     transition: .2s;
 
                     &:hover{
                         z-index: 999;
+                        
                         transform: scale(1.2);
                     }
                 }
                 
             }
+
         }
 
     }
@@ -110,9 +196,22 @@
         .row{
             display:flex;
             justify-content: center;
+            .col-6 .Card{
+                visibility: hidden;
+            }
         }
         .Card{
-            
+            visibility: hidden;
+        }
+        .Card.active{
+            animation: slide-up 1s  0.6s forwards;
+            animation-delay: .5s;
+            // background-color: black;
+
+        }
+        
+        .Card.about{
+            visibility: hidden;
             height: inherit;
             width: 70vw;
             padding: 50px 20px 50px 20px;
@@ -159,5 +258,83 @@
                 }
             }
         }
+
+        .rowforSkills{
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+            background-color: #D4D4D5;
+            .col{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                float: left ;
+                
+                width: 90%;
+                margin: 10px 10px 10px 10px ;
+            }
+        }
+        .Card.Skills{
+            height: inherit;
+            // width: 33.33%;
+            
+            padding-top: 50px;
+            padding-bottom: 50px;
+            padding-right: 20px;
+            padding-left: 20px;
+            background-color: transparent;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+            // visibility: hidden;
+            
+            .Card-Header{
+                display: flex;
+                justify-content: center;
+                margin-top:10px;
+                padding: 0px 0px 40px 0px;
+                border-bottom: 2px solid rgb(124, 123, 123);
+                margin-bottom: 1em;
+
+                .Card-Title{
+                    font-family:"Source Sans Pro","-apple-system","BlinkMacSystemFont","Segoe UI","Roboto","Helvetica Neue","Arial","sans-serif","Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+                    font-style:normal;
+                    font-weight: 400;
+                }
+            }
+
+            .Card-Body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 70%;
+            }
+            .Card-Body p{
+                text-align:center;
+                text-justify: inter-word;
+                font-size: 1.3em;
+
+                span{
+                    color: #7c2b6f;
+                    font-size: 1.35em;
+                }
+                img{
+                    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                    border-radius: 10%;
+                    margin: 10px 10px 10px 10px;
+                    height: 10vh;
+                    width: 15vh;
+                    transition: .2s;
+
+                    &:hover{
+                        z-index: 999;
+                        
+                        transform: scale(1.2);
+                    }
+                }
+                
+            }
+
+        }
+        
     }
 }
