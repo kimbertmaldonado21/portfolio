@@ -1,16 +1,17 @@
 @media (min-width: 681px) {
 
     .row{
-        width: 90%;
+        width: 90vw;
         height: auto;
-        display: flex;
-        flex-wrap: wrap;
-        
+        margin: 0 auto;
+        margin-bottom: 100px;
+        text-align: left;
+
         .col-6{
-            grid-row: 1 / 2;
-            width: 100%;
-            // background-color: blue;
-            // margin-right: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
         }
         .col-12{
             grid-row: 1 / 1;
@@ -18,38 +19,31 @@
         }
     }
 
-    .Content{
-        position: relative;
-        display: flex;
-        justify-content: center;
-        height: inherit;
-        width: 90vw;
-        margin : 0px 50px 100px 50px;
-        margin-top: 850px;
-        // margin: 0 auto;
-        
-        // background-color: rgb(221, 221, 220);
+    div.Content{
 
+        
+        height: inherit;
+        width: 95vw;
+        // margin : 0px 0px 100px 0px;
+        margin: 0 auto;
+        margin-top: 800px;
+        
+        
         .Card.active{
             animation: slide-up 1s  0.6s forwards;
             animation-delay: .5s;
 
         }
         .Card{
-            
-            // height: 50vh;
             height: inherit;
-            width: 100%;
-            // padding: 20px 50px 50px 50px;
+            width: 70%;
+            
             padding-top: 50px;
             padding-bottom: 50px;
             background-color: transparent;
             box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
             visibility: hidden;
-            // animation: slide-up 1s  0.6s forwards;
             
-
-
             .Card-Header{
                 display: flex;
                 justify-content: center;
@@ -76,18 +70,29 @@
             .Card-Body p{
                 text-align:center;
                 text-justify: inter-word;
-                font-size: 1.5em;
+                font-size: 1.3em;
 
-                
+                span{
+                    color: #7c2b6f;
+                    font-size: 1.35em;
+                }
                 img{
                     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
                     border-radius: 10%;
                     margin: 10px 10px 10px 10px;
-                    height: 20vh;
-                    width: 30vh;
+                    height: 15vh;
+                    width: 25vh;
+                    transition: .2s;
+
+                    &:hover{
+                        z-index: 999;
+                        transform: scale(1.2);
+                    }
                 }
+                
             }
         }
+
     }
 
 }
@@ -99,9 +104,13 @@
         width: 100vw;
         background-color: rgb(221, 221, 220);
         padding: 200px 0px 0px 0px;
-        display: flex;
+        display: block;
         justify-content: center;
 
+        .row{
+            display:flex;
+            justify-content: center;
+        }
         .Card{
             
             height: inherit;
@@ -130,13 +139,23 @@
             }
             .Card-Body p{
                 font-family: 'Courier New', Courier, monospace;
-                font-size: 1.5em;
+                font-size: 1.2em;
                 text-align:center;
+                span{
+                    color: #7c2b6f;
+                    font-size: 1.25em;
+                }
                 img{
                     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
                     height: 11.5vh;
                     width: 11.5vh;
                     margin: 10px 10px 10px 10px;
+
+                    &:focus{
+                        // background-color: #583D80;
+                        z-index: 999;
+                        transform: scale(1.2);
+                    }
                 }
             }
         }

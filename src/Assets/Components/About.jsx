@@ -27,13 +27,15 @@ const About = () => {
     
         <div>
             <p>
-                I am A web Developer with a Basic knowledge on 
+                Hi, I am <span>Kimbert</span> <br />
+                I'm A Fresh Graduate with a Degree of BS Computer Science. I am deeply passionate in learning and creating a website or web application
+                
             </p>
         </div>
         
         {/* <br /> */}
         
-        <div>
+        {/* <div>
             {photo.map((pic)=>{
                 return(
                     <>
@@ -44,8 +46,8 @@ const About = () => {
                 
                 
                 
-            })}
-        </div>
+            })} */}
+        {/* </div> */}
     </div>
 )
 }

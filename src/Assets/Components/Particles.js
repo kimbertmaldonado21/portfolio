@@ -30,13 +30,13 @@ const ParticlesComponent = () =>{
                     speed : {min:1, max:2}
                 },
                 size :{
-                    value : {min:1, max:3}
+                    value : {min:5, max:10}
                 },
                 color : {
                     value : "#ff0000"
                 },
                 number :{
-                    value : 30
+                    value : 10
                 }
                 
                 

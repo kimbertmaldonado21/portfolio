@@ -13,7 +13,9 @@ body{
         @import './Navigation.scss';
         @import './Content.scss';
     }
-    
+    div{
+        display: block;
+    }
 }
 
 @keyframes pop-up {

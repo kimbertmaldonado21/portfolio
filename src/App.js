@@ -31,6 +31,7 @@ function App() {
       }
 
     }
+    console.log(Yscroll)
     return () => (window.onscroll = null);
   })
 
@@ -39,10 +40,12 @@ function App() {
   return (
     <div className="App" >
       <div id="particles-js" className={isScrolled? "Navigation active" : "Navigation"} >
-      {/* <div id="particles-js" className="Navigation" > */}
+        
         {isScrolled?  null : <ParticlesComponent />}
         
-        <div className="Header"><h2 data-text="I Am Kimbert">I Am </h2>
+        <div className="Header">
+          <img className="Profile" src={require('./Assets/Images/Navigation/profile.png')} />
+          <h2 data-text="I Am Kimbert">I Am </h2>
         <div className="Cover">
         
         </div>
@@ -62,19 +65,28 @@ function App() {
       </div>
 
       <div className="Content" id="About">
-        {/* {Yscroll} */}
-        {/* {Yscroll<500 || Yscroll>815?"false" : "true"} */}
+
 
         <div className="row">
           <div className="col-6">
-            <Card Header="About Me"
-            // Content = "I am A web Developer with a Basic knowledge on HTML CSS JASCRIPT"
+            <Card
+            className="about"
+            Header="About Me"
             Content = {<About />}
             isScrolled = {isScrolled}
             />
           </div>
         </div>
         
+        <br />
+        <div className="row">
+          <div className="col-6">
+            <Card className="Skills" Header="About Me"
+            Content = {<About />}
+            isScrolled = {isScrolled}
+            />
+          </div>
+        </div>
 
           
         
